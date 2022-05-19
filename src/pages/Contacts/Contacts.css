@@ -1,0 +1,83 @@
+.Contacts .title {
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.Contacts .title h2 {
+  font-size: 40px;
+}
+
+.Contacts .contacts {
+  display: block;
+  margin: 20px auto;
+  max-width: 600px;
+  padding: clamp(10px, 3vw, 30px);
+  border-radius: 10px;
+}
+
+.Contacts .contacts * {
+  border-radius: 10px;
+}
+
+.Contacts .contacts h2 {
+  display: block;
+  padding: 10px;
+}
+
+.Contacts .contacts .input {
+  margin: 10px 0;
+  background-color: transparent;
+  border: 3px solid #c180b8;
+  width: 100%;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.Contacts .contacts .input:focus {
+  outline: none;
+  border: 3px solid #c569b9;
+}
+
+.Contacts .contacts .input::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Contacts .contacts .input:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Contacts .contacts .input::-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Contacts .contacts .input::placeholder {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.Contacts .contacts .input:focus-within {
+  background-color: #ecdfeb;
+}
+
+.Contacts .contacts .textarea {
+  height: 200px;
+  font-family: inherit;
+}
+
+.Contacts .contacts .btn {
+  display: inline-block;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #c180b8;
+}
+
+.Contacts .contacts .btn:active {
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+}
+
+.Contacts .contacts .msg {
+  text-align: center;
+  height: 30px;
+  padding: 10px;
+}

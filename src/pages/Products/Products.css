@@ -1,0 +1,106 @@
+.Products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: hidden;
+}
+
+.Products .title {
+  padding: 0 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+  min-height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Products .title h2 {
+  font-size: clamp(30px, 5vw, 40px);
+}
+
+.Products .sort {
+  margin: 0 -5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Products .sort span {
+  margin: 10px 5px 0 5px;
+  padding: 10px 15px;
+  background-color: #f68074;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 10px;
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.Products .sort span:hover {
+  -webkit-box-shadow: 3px 3px 20px #f68074;
+          box-shadow: 3px 3px 20px #f68074;
+}
+
+.Products .sort span.text:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.Products .sort .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Products .sort input {
+  background-color: #f68074;
+  border: none;
+  outline: none;
+  margin: 10px 5px 0 5px;
+  padding: 10px;
+  text-shadow: inherit;
+  font-weight: 600;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+
+.Products .sort input::-webkit-input-placeholder {
+  color: inherit;
+}
+
+.Products .sort input:-ms-input-placeholder {
+  color: inherit;
+}
+
+.Products .sort input::-ms-input-placeholder {
+  color: inherit;
+}
+
+.Products .sort input::placeholder {
+  color: inherit;
+}
+
+.Products .sort input:focus {
+  -webkit-box-shadow: 3px 3px 20px #f68074;
+          box-shadow: 3px 3px 20px #f68074;
+}
+
+.Products .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 5px -5px;
+}

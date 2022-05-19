@@ -1,0 +1,101 @@
+.header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    flex: 1 1 auto;
+    overflow: hidden;
+    .header_img img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        animation: header infinite 50s alternate linear;
+    }
+
+    @keyframes header {
+        0% {
+            object-position: top;
+        }
+        100% {
+            object-position: bottom;
+        }
+    }
+
+    .header_title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0 10px;
+        align-items: flex-start;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(201, 201, 201, 0.1);
+
+        h2 {
+            background-color: #000;
+            color: #eee;
+            padding: 0 20px 0 10px;
+            opacity: 0.6;
+            font-size: clamp(12px, 4vw, 25px);
+        }
+
+        strong.logo {
+            width: auto;
+            height: auto;
+            font-size: clamp(20px, 10vw, 45px);
+            display: block;
+            text-align: left;
+            background-color: #000;
+            opacity: 0.6;
+            overflow: hidden;
+            position: relative;
+            a {
+                color: #fff;
+                padding: 0 20px 0 10px;
+                &:hover {
+                    color: #222;
+                    background-color: #fff;
+                    &::before,
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: -400px;
+                        top: -40px;
+                        width: 80px;
+                        height: 300%;
+                        background-color: #000;
+                        animation: logo ease 0.5s 0.2s;
+                        transform: rotate(30deg);
+                    }
+                    &::after {
+                        left: -200px;
+                        animation: logo2 ease 0.5s 0.2s;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes logo {
+        0% {
+            left: -400px;
+        }
+        100% {
+            left: 110%;
+        }
+    }
+
+    @keyframes logo2 {
+        0% {
+            left: -200px;
+        }
+        100% {
+            left: 140%;
+        }
+    }
+}

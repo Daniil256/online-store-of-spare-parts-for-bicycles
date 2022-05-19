@@ -1,0 +1,157 @@
+.Order {
+    .row {
+        display: flex;
+        justify-content: center;
+        .order-list {
+            margin-top: 10px;
+            padding: 20px;
+            flex: 0 0 35%;
+            max-width: 300px;
+            h2 {
+                margin-bottom: 10px;
+            }
+            span {
+                margin-bottom: 10px;
+                display: block;
+            }
+            .products {
+                display: flex;
+                flex-wrap: wrap;
+                .product_order {
+                    padding: 0;
+                    margin: 5px;
+                    min-width: 120px;
+                    flex: 1 1 calc(50% - 10px);
+                    background-color: rgb(191, 199, 235);
+                    border-radius: 5px;
+                    .product_img {
+                        margin: 2px;
+                        img {
+                            border-top-left-radius: 5px;
+                            border-top-right-radius: 5px;
+                            width: 100%;
+                            height: 80px;
+                            object-fit: cover;
+                            display: block;
+                        }
+                    }
+                    .product_title {
+                        font-size: 14px;
+                        height: auto;
+                        white-space: normal;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+    .title,
+    .order-progress {
+        background-color: rgb(138, 152, 218);
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        h2 {
+            font-size: 40px;
+        }
+        span.item {
+            display: inline-block;
+            height: 100%;
+            padding: 10px;
+            cursor: pointer;
+            &.active {
+                background-color: rgb(103, 194, 151);
+            }
+        }
+    }
+    .form {
+        display: block;
+        flex: 0 1 50%;
+        padding: 0;
+        margin-right: clamp(20px, 4vw, 100px);
+        h2 {
+            margin: 20px 0;
+            text-align: left;
+        }
+        input,
+        div input {
+            display: block;
+            width: 100%;
+            padding: 10px;
+        }
+        .map {
+            height: 300px;
+            width: 100%;
+            padding: 0;
+        }
+        .row {
+            display: flex;
+            flex-direction: row;
+            padding: 0;
+            margin: 15px 0 0 0;
+            justify-content: start;
+
+            .btn {
+                flex: 0 1 auto;
+                width: auto;
+                cursor: pointer;
+                &:hover {
+                    background-color: #ccc;
+                }
+            }
+        }
+        input,
+        button {
+            border: 2px solid #ccc;
+            outline: none;
+            padding: 10px;
+            background-color: rgb(243, 243, 243);
+            margin-bottom: 20px;
+            &:focus {
+                background-color: rgb(252, 252, 252);
+            }
+        }
+        button {
+            margin-right: 10px;
+        }
+        label {
+            margin-top: 10px;
+            line-height: 1;
+            display: flex;
+            input {
+                margin: 0 10px 0 0;
+                width: auto;
+            }
+        }
+    }
+    .row {
+        p {
+            margin: 20px 0;
+            font-size: 16px;
+        }
+        span {
+            a {
+                background-color: rgb(103, 194, 151);
+                max-width: 200px;
+                height: auto;
+                padding: 10px;
+                margin-top: 10px;
+                transition: 0.3s ease;
+                &:hover {
+                    box-shadow: 5px 5px 20px rgb(103, 194, 151);
+                }
+            }
+        }
+    }
+}
+@media (max-width: 500px) {
+    .Order .row {
+        flex-direction: column;
+        .order-list {
+            padding: 5px;
+        }
+        .form {
+            margin: 0;
+        }
+    }
+}

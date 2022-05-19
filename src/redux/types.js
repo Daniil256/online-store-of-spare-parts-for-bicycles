@@ -1,0 +1,7 @@
+export const ADD_IN_CART = 'ADD_IN_CART'
+export const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+export const CLEAR_CART = 'CLEAR_CART'
+export const SORT_BY_NAME = 'SORT_BY_NAME'
+export const SORT_BY_COST = 'SORT_BY_COST'
+export const SEARCH = 'SEARCH'
+export const ORDERING = 'ORDERING'
