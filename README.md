@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+Добрый день! Меня зовут Даниил Крючков, и вы просматриваете мое тестовое задание, которое я сделал для MEDIASOFT. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Техническое задание:
+Написать SPA приложение (интернет-магазин).
 
-## Available Scripts
+Необходимый функционал
 
-In the project directory, you can run:
+- Развернуть React/Redux приложение 
+- route / — вывод товаров 
+- Реализовать сортировки
+по цене и по названию 
+- Реализовать исключающие
+фильтры по товарам по какому-либо признаку
+товара 
+- Реализовать функционал добавлениw товаров в
+корзину
+- route /cart — вывод краткой информации о товарах,
+добавленных в корзину
+- route /order - оформление заказа. 
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Запуск проекта происходит стандартно: нужно загрузить копию проекта себе в компьютер командами
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+git init
 
-### `npm test`
+git clone https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+cd online-store-of-spare-parts-for-bicycles
 
-### `npm run build`
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Так же можно запустить готовый bulid проекта по ссылке daniil256.github.io
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Описание проекта:
+1. Spa-приложение, загружается быстро, были произведены некоторые оптимизации(сжатие картинок)
+2. Присутствует сортировка товара по названию и по цене
+3. Фильтр осуществлен через строку поиска по названию управляемым input
+4. Возможность выбирать нескоько единиц одного товара
+5. Возможность оформить заказ на один товар как на главной странице, так и заказать всю корзину
+6. Пагинация
+7. Все товары из корзины и из страницы заказа клонируются в localStorage, и при обновлении страницы не пропадают
+8. Подсчет общей стоимости товаров на странице заказа
+9. Все введенные данные на странице заказа хранятся объектом в переменной и готовы для отправки на сервер
+10. Добавлен удобный ввод данных банковской карты с автовставкой (может не работать, если подключение не будет защищено)
+11. Приложение адаптировано под различные экраны
+12. Дизайн разработал я. могут быть ошибки в верстке, т.к торопился
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# Сложности, с которыми я столкнулся при разработке
+1. Я не смог поноценно подключить API google maps для установки адреса через карту. То ли из за санкций, то ли я не криворукий
