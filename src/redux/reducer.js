@@ -13,8 +13,8 @@ const initalState = {
     productListCart: [],
     productList: [],
     orderList: [],
+    productListFilter: [],
 }
-let productListOriginal = []
 export const reducer = (state = initalState, action) => {
     switch (action.type) {
         case PRODUCT_LIST_LOADED:
@@ -58,8 +58,13 @@ export const reducer = (state = initalState, action) => {
             }
 
         case SEARCH:
-            state.productList = productListOriginal.filter((item) =>
-                item.name.toLowerCase().includes(action.value.toLowerCase()))
+            if (state.productList.length) {
+                state.productListFilter = state.productList.filter(item =>
+                    item.name.toLowerCase().includes(action.value.toLowerCase()))
+                if (state.productListFilter.length === 0) {
+                    state.productListFilter = 'Ничего не найдено'
+                }
+            }
             return {
                 ...state,
             }

@@ -15,26 +15,35 @@ import ProductPage from "./pages/ProductPage/ProductPage";
 
 function App({ onLoadedProductList }) {
   useMemo(async () => {
-    const response = await axios.get('https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2')
-    console.log('Запрос!')
-    onLoadedProductList(response.data)
-  }, [])
+    try {
+      const response = await axios.get(
+        "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
+      );
+      console.log("Произведен запрос на сервер");
+      onLoadedProductList(response.data);
+    } catch (e) {
+      onLoadedProductList("Ошибка загрузки данных с сервера " + e);
+    }
+  }, []);
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />} >
+        <Route path="/" element={<Layout />}>
           <Route index element={<Products />} />
           <Route path=":id" element={<ProductPage />} />
           <Route path="contacts" element={<Contacts />} />
           <Route path="about" element={<About />} />
           <Route path="cart" element={<Cart />} />
           <Route path="order" element={<Order />} />
-          <Route path="*" element={<h2 className="message">Страница не найдена</h2>} />
+          <Route
+            path="*"
+            element={<h2 className="message">Страница не найдена</h2>}
+          />
         </Route>
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App)
+export default connect(mapStateToProps, mapDispatchToProps)(App);

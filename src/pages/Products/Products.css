@@ -107,6 +107,5 @@
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  min-height: 110vh;
   width: 100%;
 }

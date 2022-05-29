@@ -5,7 +5,7 @@ import ProductItem from "../../components/ProductItem/ProductItem"
 import { mapDispatchToProps, mapStateToProps } from '../../redux/dispatch';
 import './Cart.css'
 
-const Cart = ({ products, onClearCart, onOrdering }) => {
+const Cart = ({ products, onClearCart, onOrdering, onSearch }) => {
 
     useEffect(() => {
         onOrdering([])
