@@ -1,0 +1,30 @@
+.Cart .title {
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+.Cart .title h2 {
+    font-size: 40px;
+}
+.Cart .items {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px -5px;
+}
+.Cart .btn_cart {
+    cursor: pointer;
+    padding: 15px 20px;
+    font-size: 20px;
+    background-color: rgb(103, 194, 151);
+    margin: 10px 10px 0 0;
+    display: inline-block;
+    transition: 0.3s ease;
+    border-radius: 10px;
+}
+.Cart a {
+    width: auto;
+    height: auto;
+}
+.Cart .btn_cart:hover {
+    box-shadow: 5px 5px 20px rgb(103, 194, 151);
+}

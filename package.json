@@ -1,0 +1,45 @@
+{
+  "name": "test_app_from_typescript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html && parcel watch src/index.html",
+    "build": "parcel build src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/preset-react": "^7.16.7",
+    "buffer": "^6.0.3",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.30.0",
+    "parcel": "^2.6.0",
+    "prettier": "^2.6.2",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@parcel/resolver-default": "^2.6.0",
+    "@react-google-maps/api": "^2.11.8",
+    "axios": "^0.27.2",
+    "final-form": "^4.20.7",
+    "payment": "^2.4.6",
+    "react": "^18.1.0",
+    "react-credit-cards": "^0.8.3",
+    "react-dom": "^18.1.0",
+    "react-final-form": "^6.5.9",
+    "react-hot-loader": "^4.13.0",
+    "react-redux": "^8.0.2",
+    "react-router": "^6.3.0",
+    "react-router-dom": "^6.3.0",
+    "react-scroll": "^1.8.7",
+    "react-transition-group": "^4.4.2",
+    "redux": "^4.2.0",
+    "styled-components": "^5.3.5"
+  }
+}

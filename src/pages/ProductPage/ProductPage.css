@@ -1,0 +1,217 @@
+.ProductPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 5px 10px 5px;
+}
+
+.ProductPage .title {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #8cc572;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  margin: 10px 5px 0 5px;
+}
+
+.ProductPage .title h2 {
+  font-size: 40px;
+}
+
+.ProductPage .row {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 66.666%;
+          flex: 1 1 66.666%;
+}
+
+.ProductPage .block {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 10px 5px 0 5px;
+}
+
+.ProductPage .block.cost {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.ProductPage .block.cost span {
+  font-size: 42px;
+  text-align: center;
+  display: block;
+  white-space: nowrap;
+}
+
+.ProductPage .block.cost span.old_cost {
+  margin: 0;
+  font-size: 35px;
+  position: relative;
+  overflow: hidden;
+  padding: 0 10px;
+}
+
+.ProductPage .block.cost span.old_cost::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 130%;
+  height: 5px;
+  background-color: #000;
+  -webkit-transform: rotateZ(10deg);
+          transform: rotateZ(10deg);
+}
+
+.ProductPage .block.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ProductPage .block.buttons span,
+.ProductPage .block.buttons a {
+  display: block;
+  padding: 10px 15px;
+  font-size: 23px;
+  height: auto;
+  width: auto;
+  margin: 5px;
+  border-radius: 10px;
+  background-color: #f0e054;
+  -webkit-transition: -webkit-box-shadow 0.3s ease;
+  transition: -webkit-box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, -webkit-box-shadow 0.3s ease;
+}
+
+.ProductPage .block.buttons span:hover, .ProductPage .block.buttons span.active,
+.ProductPage .block.buttons a:hover,
+.ProductPage .block.buttons a.active {
+  background-color: #f0f322;
+  -webkit-box-shadow: 1px 1px 20px #f0f000;
+          box-shadow: 1px 1px 20px #f0f000;
+}
+
+.ProductPage .block ul li {
+  display: block;
+  margin-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.ProductPage .block ul li:hover::before {
+  background-color: #c00;
+}
+
+.ProductPage .block ul li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 1px;
+  border: 2px solid #c00;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  z-index: 3;
+}
+
+.ProductPage .block h4 {
+  margin-bottom: 10px;
+}
+
+.ProductPage .block h5 {
+  margin-top: 10px;
+}
+
+.ProductPage .block p {
+  margin-bottom: 5px;
+}
+
+.ProductPage .block .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.ProductPage .block .products .ProductItemLitle {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(20% - 10px);
+          flex: 1 1 calc(20% - 10px);
+  max-width: 300px;
+  background-color: #dfaf67;
+}
+
+.ProductPage .block .products .ProductItemLitle:hover {
+  -webkit-box-shadow: 5px 5px 20px #dfaf67;
+          box-shadow: 5px 5px 20px #dfaf67;
+}
+
+.ProductPage .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 calc(33.333%);
+          flex: 1 1 calc(33.333%);
+}
+
+.ProductPage .column.image .img {
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}
+
+.ProductPage .column.image .img img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  display: block;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.ProductPage .column.image .img img:hover {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+}
+
+.ProductPage .column.image .block h4 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.ProductPage .column.image .block ul li::before {
+  display: none;
+}
+
+.ProductPage .column.image .block ol li {
+  list-style: decimal;
+  margin-left: 25px;
+}
+
+.ProductPage .column.image .block ol li::marker {
+  color: #c00;
+  font-size: 16px;
+  font-weight: 900;
+}

@@ -1,0 +1,8 @@
+.btn {
+    cursor: pointer;
+    background-color: rgb(228, 228, 228);
+}
+.btn:hover,
+.btn.active {
+    background-color: rgb(211, 211, 211);
+}

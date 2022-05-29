@@ -1,0 +1,180 @@
+.Order .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Order .row .order-list {
+  margin-top: 10px;
+  padding: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  max-width: 300px;
+}
+
+.Order .row .order-list h2 {
+  margin-bottom: 10px;
+}
+
+.Order .row .order-list span {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.Order .row .order-list .products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.Order .title,
+.Order .order-progress {
+  background-color: #8a98da;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.Order .title h2,
+.Order .order-progress h2 {
+  font-size: 40px;
+}
+
+.Order .title span.item,
+.Order .order-progress span.item {
+  display: inline-block;
+  height: 100%;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.Order .title span.item.active,
+.Order .order-progress span.item.active {
+  background-color: #67c297;
+}
+
+.Order .form {
+  display: block;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  padding: 0;
+  margin-right: clamp(20px, 4vw, 100px);
+}
+
+.Order .form h2 {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.Order .form input,
+.Order .form div input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.Order .form .map {
+  height: 300px;
+  width: 100%;
+  padding: 0;
+}
+
+.Order .form .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 0;
+  margin: 15px 0 0 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.Order .form .row .btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  width: auto;
+  cursor: pointer;
+}
+
+.Order .form .row .btn:hover {
+  background-color: #ccc;
+}
+
+.Order .form input,
+.Order .form button {
+  border: 2px solid #ccc;
+  outline: none;
+  padding: 10px;
+  background-color: #f3f3f3;
+  margin-bottom: 20px;
+}
+
+.Order .form input:focus,
+.Order .form button:focus {
+  background-color: #fcfcfc;
+}
+
+.Order .form button {
+  margin-right: 10px;
+}
+
+.Order .form label {
+  margin-top: 10px;
+  line-height: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Order .form label input {
+  margin: 0 10px 0 0;
+  width: auto;
+}
+
+.Order .row p {
+  margin: 20px 0;
+  font-size: 16px;
+}
+
+.Order .row span a {
+  background-color: #67c297;
+  max-width: 200px;
+  height: auto;
+  padding: 10px;
+  margin-top: 10px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.Order .row span a:hover {
+  -webkit-box-shadow: 5px 5px 20px #67c297;
+          box-shadow: 5px 5px 20px #67c297;
+}
+
+@media (max-width: 500px) {
+  .Order .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Order .row .order-list {
+    padding: 5px;
+  }
+  .Order .row .form {
+    margin: 0;
+  }
+}

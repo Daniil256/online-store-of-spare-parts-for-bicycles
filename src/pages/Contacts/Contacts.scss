@@ -1,0 +1,64 @@
+.Contacts {
+    .title {
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 10px;
+        h2 {
+            font-size: 40px;
+        }
+    }
+    .contacts {
+        display: block;
+        margin: 20px auto;
+        max-width: 600px;
+        padding: clamp(10px, 3vw, 30px);
+        border-radius: 10px;
+        * {
+            border-radius: 10px;
+        }
+        h2 {
+            display: block;
+            padding: 10px;
+            // border: 3px solid rgb(193, 128, 184);
+        }
+        .input {
+            margin: 10px 0;
+            background-color: transparent;
+            border: 3px solid rgb(193, 128, 184);
+            width: 100%;
+            font-size: 16px;
+            padding: 10px;
+        }
+        .input:focus {
+            outline: none;
+            border: 3px solid rgb(197, 105, 185);
+        }
+        .input::placeholder {
+            color: rgba(0, 0, 0, 0.5);
+        }
+        .input:focus-within {
+            background-color: rgb(236, 223, 235);
+        }
+
+        .textarea {
+            height: 200px;
+            font-family: inherit;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: rgb(193, 128, 184);
+        }
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        .msg {
+            text-align: center;
+            height: 30px;
+            padding: 10px;
+        }
+    }
+}

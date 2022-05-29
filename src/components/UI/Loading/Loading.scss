@@ -1,0 +1,22 @@
+.Loading {
+    margin: 50px auto;
+    span {
+        display: block;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border-top: 20px solid rgb(68, 96, 218);
+        border-bottom: 20px solid rgb(68, 96, 218);
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        animation: load 1s ease-in-out infinite alternate;
+    }
+}
+@keyframes load {
+    0% {
+        transform: rotateZ(0deg);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

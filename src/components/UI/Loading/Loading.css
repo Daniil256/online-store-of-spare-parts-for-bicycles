@@ -1,0 +1,38 @@
+.Loading {
+  margin: 50px auto;
+}
+
+.Loading span {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border-top: 20px solid #4460da;
+  border-bottom: 20px solid #4460da;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  -webkit-animation: load 1s ease-in-out infinite alternate;
+          animation: load 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes load {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
+
+@keyframes load {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
+  }
+}
