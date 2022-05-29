@@ -2,7 +2,7 @@ import { useParams } from "react-router"
 import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch"
 import './ProductPage.css'
-import { ProductItemLitle } from "../../components/UI/ProductItemLitle/ProductItemLitle";
+import { ProductItemLitle } from "../../components/ProductItemLitle/ProductItemLitle";
 import { NavLink } from "react-router-dom";
 
 const ProductPage = ({ onAddInCart, products, onRemoveInCart, onOrdering }) => {

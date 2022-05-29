@@ -113,11 +113,7 @@ const Order = ({ products }) => {
                         }
                     }}
                 />
-                <div className="order-list">
-                    <h2>Ваш заказ</h2>
-                    <span>Общая стоимость {totalCost.toLocaleString()} &#8381;</span>
-                    <OrderProducts />
-                </div>
+                <OrderProducts totalCost={totalCost} />
             </div>
         </div >
     )

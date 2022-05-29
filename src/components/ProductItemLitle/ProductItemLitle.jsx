@@ -8,12 +8,14 @@ export const ProductItemLitle = ({ item, order }) => {
                 <div className="product_img">
                     <img src={`./img/products_img/${item.img}.jpg`} alt="description" />
                 </div>
-                <span className="product_title">{item.name + ' '}
-
-                    {order && item.numberOfGoods + ' шт '}
-
-                    {order && (item.cost * item.numberOfGoods).toLocaleString() + ' ₽'}
-                </span>
+                <div className="product_title">{item.name + ' '}
+                    {order &&
+                        <>
+                            <span>{item.numberOfGoods} шт</span>
+                            <span className='cost'>{(item.cost * item.numberOfGoods).toLocaleString()} ₽</span>
+                        </>
+                    }
+                </div>
             </Link>
         </div>
     )

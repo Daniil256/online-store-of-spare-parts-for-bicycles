@@ -20,11 +20,11 @@
   display: block;
 }
 
-.ProductItemLitle .product_img {
+.ProductItemLitle a .product_img {
   margin: 2px;
 }
 
-.ProductItemLitle .product_img img {
+.ProductItemLitle a .product_img img {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   width: 100%;
@@ -34,10 +34,15 @@
   display: block;
 }
 
-.ProductItemLitle .product_title {
+.ProductItemLitle a .product_title {
   font-size: 14px;
   height: auto;
   white-space: normal;
   text-align: center;
-  display: block;
+  margin: 0;
+  padding-top: 5px;
+}
+
+.ProductItemLitle a .product_title .cost {
+  font-weight: 600;
 }
