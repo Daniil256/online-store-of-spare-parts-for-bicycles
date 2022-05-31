@@ -18,7 +18,9 @@
 добавленных в корзину
 - route /order - оформление заказа. 
 
-
+# В репозитории находятся три версии приложения
+1. Первая версия project_first_version 22.05.22
+2. Новая версия 
 # Запуск старой версии проекта 
 - git init
 - git add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
