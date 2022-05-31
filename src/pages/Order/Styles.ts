@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
 
-const btn = (light, dark) => css`
+const btn = (light: any, dark: any) => css`
   white-space: nowrap;
   display: inline-block;
   border-radius: 5px;

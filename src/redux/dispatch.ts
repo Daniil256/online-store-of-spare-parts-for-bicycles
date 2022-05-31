@@ -1,15 +1,15 @@
-export function mapStateToProps({ items }) {
+export function mapStateToProps({ items }: any) {
     return {
         products: items
     }
 }
-export function mapDispatchToProps(dispatch) {
+export function mapDispatchToProps(dispatch: any) {
     return {
-        onAddInCart: (item) => {
+        onAddInCart: (item: object) => {
             const action = { type: 'ADD_IN_CART', item }
             dispatch(action)
         },
-        onRemoveInCart: (item) => {
+        onRemoveInCart: (item: object) => {
             const action = { type: 'REMOVE_FROM_CART', item }
             dispatch(action)
         },
@@ -25,15 +25,21 @@ export function mapDispatchToProps(dispatch) {
             const action = { type: 'SORT_BY_COST' }
             dispatch(action)
         },
-        onSearch: (value) => {
+        onSearch: (value: string) => {
             const action = { type: 'SEARCH', value }
             dispatch(action)
         },
-        onOrdering: (value) => {
-            const action = { type: 'ORDERING', value }
+        onOrdering: (orderList: Array<object>) => {
+            const action = { type: 'ORDERING', orderList }
             dispatch(action)
         },
-        onLoadedProductList: (productList) => {
+        onErrorMessage: (value: string) => {
+            const action = { type: 'ERROR_MESSAGE', value }
+
+            console.log(dispatch);
+            dispatch(action)
+        },
+        onLoadedProductList: (productList: any[]) => {
             const action = { type: 'PRODUCT_LIST_LOADED', productList }
             dispatch(action)
         },

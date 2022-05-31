@@ -1,25 +1,34 @@
-import {
-    ADD_IN_CART,
-    CLEAR_CART,
-    REMOVE_FROM_CART,
-    SORT_BY_NAME,
-    SORT_BY_COST,
-    SEARCH,
-    ORDERING,
-    PRODUCT_LIST_LOADED
-} from "./types";
+import { Iaction, InitalState } from "../interfaces";
+import { ADD_IN_CART, CLEAR_CART, ERROR_MESSAGE, ORDERING, PRODUCT_LIST_LOADED, REMOVE_FROM_CART, SEARCH, SORT_BY_COST, SORT_BY_NAME } from "./types";
 
-const initalState = {
+
+const initalState: InitalState = {
     productListCart: [],
-    productList: [],
+    productList: [
+        {
+            "name": "Велокамера",
+            "cost": 285,
+            "limited": false,
+            "img": "bike_chamber",
+            "id": 0,
+            "numberOfGoods": 1
+        },
+    ],
     orderList: [],
     productListFilter: [],
+    errorMessage: '',
 }
-export const reducer = (state = initalState, action) => {
+
+export const reducer = (state: InitalState = initalState, action: Iaction) => {
     switch (action.type) {
+        case ERROR_MESSAGE:
+            state.errorMessage = action.value
+            return {
+                ...state
+            }
         case PRODUCT_LIST_LOADED:
             state.productList = action.productList
-            productListOriginal = action.productList
+            state.productListFilter = action.productList
             return {
                 ...state
             }
@@ -59,17 +68,17 @@ export const reducer = (state = initalState, action) => {
 
         case SEARCH:
             if (state.productList.length) {
-                state.productListFilter = state.productList.filter(item =>
+                state.productListFilter = state.productList.filter((item: any) =>
                     item.name.toLowerCase().includes(action.value.toLowerCase()))
                 if (state.productListFilter.length === 0) {
-                    state.productListFilter = 'Ничего не найдено'
+                    state.errorMessage = 'Ничего не найдено'
                 }
             }
             return {
                 ...state,
             }
         case ORDERING:
-            state.orderList = action.value
+            state.orderList = action.orderList
             localStorage.setItem('orderData', JSON.stringify(state.orderList))
 
             return {
@@ -77,7 +86,8 @@ export const reducer = (state = initalState, action) => {
             }
 
         default:
-            localStorage.getItem('orderData') && (state.orderList = JSON.parse(localStorage.getItem('orderData')))
+            if (localStorage.getItem('orderData'))
+                state.orderList = JSON.parse(localStorage.getItem('orderData')!)
             return state
     }
 }

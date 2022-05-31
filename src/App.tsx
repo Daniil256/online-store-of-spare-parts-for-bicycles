@@ -1,5 +1,8 @@
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
+import { useMemo } from "react";
+import { connect } from "react-redux";
+import axios from "axios";
 import "./App.css";
 import { Layout } from "./pages/Layout/Layout";
 import Products from "./pages/Products/Products";
@@ -7,22 +10,22 @@ import { Contacts } from "./pages/Contacts/Contacts";
 import { About } from "./pages/About/About";
 import Order from "./pages/Order/Order";
 import Cart from "./pages/Cart/Cart";
-import axios from "axios";
-import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "./redux/dispatch";
-import { useMemo } from "react";
 import ProductPage from "./pages/ProductPage/ProductPage";
+import { FC } from "react";
+import React from "react";
+import { IProps, Item } from "./interfaces";
 
-function App({ onLoadedProductList }) {
+const App: FC<IProps> = ({ onLoadedProductList, onErrorMessage }) => {
   useMemo(async () => {
+    const response: { data: Array<Item> } = await axios.get(
+      "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
+    );
     try {
-      const response = await axios.get(
-        "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
-      );
       console.log("Произведен запрос на сервер");
       onLoadedProductList(response.data);
     } catch (e) {
-      onLoadedProductList("Ошибка загрузки данных с сервера " + e);
+      onErrorMessage("Ошибка загрузки данных с сервера " + e);
     }
   }, []);
 
@@ -44,6 +47,6 @@ function App({ onLoadedProductList }) {
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

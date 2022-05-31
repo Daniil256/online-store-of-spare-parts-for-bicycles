@@ -1,10 +1,11 @@
 import Payment from 'payment'
+import { FieldProps, FieldRenderProps } from 'react-final-form'
 
-function clearNumber(value = '') {
+function clearNumber(value: string = '') {
     return value.replace(/\D+/g, '')
 }
 
-export function formatCreditCardNumber(value) {
+export function formatCreditCardNumber(value: string) {
     if (!value) {
         return value
     }
@@ -37,7 +38,9 @@ export function formatCreditCardNumber(value) {
     return nextValue.trim()
 }
 
-export function formatCVC(value, prevValue, allValues = {}) {
+
+
+export function formatCVC(value: string, allValues: any) {
     const clearValue = clearNumber(value)
     let maxLength = 4
 
@@ -49,7 +52,7 @@ export function formatCVC(value, prevValue, allValues = {}) {
     return clearValue.slice(0, maxLength)
 }
 
-export function formatExpirationDate(value) {
+export function formatExpirationDate(value: string) {
     const clearValue = clearNumber(value)
 
     if (clearValue.length >= 3) {
