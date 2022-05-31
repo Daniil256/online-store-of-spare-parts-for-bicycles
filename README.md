@@ -21,14 +21,10 @@
 
 # Запуск проекта происходит стандартно: нужно загрузить копию проекта себе в компьютер командами
 
-git init
-
-git clone https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
-
-cd online-store-of-spare-parts-for-bicycles
-
-npm start
-
+- git init
+- git clone https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
+- cd online-store-of-spare-parts-for-bicycles
+- npm start
 Так же можно запустить готовый bulid проекта по ссылке daniil256.github.io
 
 # Описание проекта:
