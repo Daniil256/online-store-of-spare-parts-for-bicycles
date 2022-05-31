@@ -23,7 +23,7 @@
 - git init
 - git add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 - git pull origin project_first_version
-- npm build
+- npm start
 - перейти в браузере в localhost:3000
 Так же можно запустить готовый bulid проекта по ссылке https://daniil256.github.io
 
