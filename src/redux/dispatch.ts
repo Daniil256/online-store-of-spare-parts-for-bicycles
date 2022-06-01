@@ -1,46 +1,48 @@
-export function mapStateToProps({ items }: any) {
+import { Iaction, IrootReducer, Item } from "../interfaces"
+
+
+
+export function mapStateToProps({ rootReducer }: IrootReducer) {
     return {
-        products: items
+        products: rootReducer
     }
 }
-export function mapDispatchToProps(dispatch: any) {
+export function mapDispatchToProps(dispatch: (action: Iaction) => void) {
     return {
-        onAddInCart: (item: object) => {
-            const action = { type: 'ADD_IN_CART', item }
+        onAddInCart: (item: Item) => {
+            const action: Iaction = { type: 'ADD_IN_CART', item }
             dispatch(action)
         },
-        onRemoveInCart: (item: object) => {
-            const action = { type: 'REMOVE_FROM_CART', item }
+        onRemoveInCart: (item: Item) => {
+            const action: Iaction = { type: 'REMOVE_FROM_CART', item }
             dispatch(action)
         },
         onClearCart: () => {
-            const action = { type: 'CLEAR_CART' }
+            const action: Iaction = { type: 'CLEAR_CART' }
             dispatch(action)
         },
         onSortByName: () => {
-            const action = { type: 'SORT_BY_NAME' }
+            const action: Iaction = { type: 'SORT_BY_NAME' }
             dispatch(action)
         },
         onSortByCost: () => {
-            const action = { type: 'SORT_BY_COST' }
+            const action: Iaction = { type: 'SORT_BY_COST' }
             dispatch(action)
         },
         onSearch: (value: string) => {
-            const action = { type: 'SEARCH', value }
+            const action: Iaction = { type: 'SEARCH', value }
             dispatch(action)
         },
-        onOrdering: (orderList: Array<object>) => {
-            const action = { type: 'ORDERING', orderList }
+        onOrdering: (orderList: Array<Item>) => {
+            const action: Iaction = { type: 'ORDERING', orderList }
             dispatch(action)
         },
         onErrorMessage: (value: string) => {
-            const action = { type: 'ERROR_MESSAGE', value }
-
-            console.log(dispatch);
+            const action: Iaction = { type: 'ERROR_MESSAGE', value }
             dispatch(action)
         },
-        onLoadedProductList: (productList: any[]) => {
-            const action = { type: 'PRODUCT_LIST_LOADED', productList }
+        onLoadedProductList: (productList: Array<Item>) => {
+            const action: Iaction = { type: 'PRODUCT_LIST_LOADED', productList }
             dispatch(action)
         },
     }

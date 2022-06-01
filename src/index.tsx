@@ -6,7 +6,7 @@ import { rootReducer } from "./redux/rootReducer";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
 
-const store: any = createStore(rootReducer);
+const store = createStore(rootReducer);
 export default store;
 
 const root = ReactDOM.createRoot(

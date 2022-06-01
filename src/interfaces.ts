@@ -20,7 +20,7 @@ export interface IProps {
     onSortByName(): void;
     onSortByCost(): void;
     onSearch(value: string): void;
-    onOrdering(array: Array<object> | object): void;
+    onOrdering(array: Array<object>): void;
     onAddInCart(item: object): void
     onRemoveInCart(item: object): void
     onLoadedProductList: (response: Array<object>) => void;
@@ -37,11 +37,11 @@ export interface InitalState {
 }
 
 export interface Iaction {
-    item: Item
+    item?: Item
     type: string
-    value: string
-    orderList: Array<Item>
-    productList: Array<Item>
+    value?: string
+    orderList?: Array<Item>
+    productList?: Array<Item>
 }
 
 export interface Iform {
@@ -53,5 +53,9 @@ export interface Iform {
     checkoutWindowNumber?: any
     values?: any
     active?: any
-
+}
+export interface IrootReducer {
+    rootReducer: {
+        products: IProps
+    }
 }

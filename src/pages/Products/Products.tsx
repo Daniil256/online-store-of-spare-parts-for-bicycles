@@ -19,17 +19,17 @@ const Products: ComponentType<IProps> = ({
 
   const [load, setLoad] = useState<boolean>(true);
 
+  const [countriesPerPage, setCountriesPerPage] = useState<number>(15);
+
   const lastElement = useRef<HTMLDivElement>(null!);
   const observer = useRef<IntersectionObserver | null>(null);
 
-  const [countriesPerPage, setCountriesPerPage] = useState<number>(15);
-
-  const currentCountry: Array<Item> = productList.slice(0, countriesPerPage);
+  const currentCountry = productList.slice(0, countriesPerPage);
 
   useEffect(() => {
-    let page = 1;
+    let page: number = 1;
 
-    const callback = function (entries: any[]) {
+    const callback = function (entries: Array<{ isIntersecting: boolean }>) {
       if (
         entries[0].isIntersecting &&
         page * 15 < productList.length &&

@@ -18,7 +18,7 @@ const ProductPage: ComponentType<IProps> = ({
   const { id }: Readonly<Params<string>> = useParams();
 
   let item: Item =
-    products.productList.find((unit: any) => unit.id === Number(id)) ||
+    products.productList.find((unit: Item) => unit.id === Number(id)) ||
     JSON.parse(localStorage.getItem("ProductPage")!);
 
   localStorage.setItem("ProductPage", JSON.stringify(item));
@@ -167,7 +167,7 @@ const ProductPage: ComponentType<IProps> = ({
         <div className="block violet-red">
           <h4>Смотреть похожие</h4>
           <div className="products">
-            {ProductsInBlockSimilar.map((item: Item) => (
+            {ProductsInBlockSimilar.map((item) => (
               <ProductItemLitle key={item.id} item={item} />
             ))}
           </div>

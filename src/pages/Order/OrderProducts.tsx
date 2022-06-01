@@ -1,7 +1,7 @@
 import React, { ComponentType } from "react";
 import { connect } from "react-redux";
 import { ProductItemLitle } from "../../components/ProductItemLitle/ProductItemLitle";
-import { IProps, Item } from "../../interfaces";
+import { IProps } from "../../interfaces";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
 
 const OrderProducts: ComponentType<IProps> = ({ products, totalCost }) => {
@@ -10,7 +10,7 @@ const OrderProducts: ComponentType<IProps> = ({ products, totalCost }) => {
       <h2>Ваш заказ</h2>
       <span>Общая стоимость {totalCost!.toLocaleString()} &#8381;</span>
       <div className="products">
-        {products.orderList.map((item: Item) => (
+        {products.orderList.map((item) => (
           <ProductItemLitle key={item.id} item={item} order={true} />
         ))}
       </div>

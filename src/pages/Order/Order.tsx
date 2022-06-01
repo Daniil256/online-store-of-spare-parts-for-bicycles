@@ -32,10 +32,10 @@ const Order: ComponentType<IProps> = ({ products }) => {
     setCheckoutWindowNumberStopLoss(value);
   };
 
-  let totalCost = 0;
+  let totalCost: number = 0;
 
   products.orderList.map(
-    (item: Item) => (totalCost += item.numberOfGoods * item.cost)
+    (item) => (totalCost += item.numberOfGoods * item.cost)
   );
 
   return (

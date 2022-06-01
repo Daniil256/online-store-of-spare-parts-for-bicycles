@@ -4,44 +4,35 @@ import { ADD_IN_CART, CLEAR_CART, ERROR_MESSAGE, ORDERING, PRODUCT_LIST_LOADED, 
 
 const initalState: InitalState = {
     productListCart: [],
-    productList: [
-        {
-            "name": "Велокамера",
-            "cost": 285,
-            "limited": false,
-            "img": "bike_chamber",
-            "id": 0,
-            "numberOfGoods": 1
-        },
-    ],
+    productList: [],
     orderList: [],
     productListFilter: [],
     errorMessage: '',
 }
 
-export const reducer = (state: InitalState = initalState, action: Iaction) => {
+export const reducer = (state = initalState, action: Iaction) => {
     switch (action.type) {
         case ERROR_MESSAGE:
-            state.errorMessage = action.value
+            state.errorMessage = action.value!
             return {
                 ...state
             }
         case PRODUCT_LIST_LOADED:
-            state.productList = action.productList
-            state.productListFilter = action.productList
+            state.productList = action.productList!
+            state.productListFilter = action.productList!
             return {
                 ...state
             }
 
         case ADD_IN_CART:
-            state.productListCart.push(action.item)
+            state.productListCart.push(action.item!)
 
             return {
                 ...state
             }
 
         case REMOVE_FROM_CART:
-            const index = state.productListCart.indexOf(action.item)
+            const index = state.productListCart.indexOf(action.item!)
             state.productListCart.splice(index, 1)
 
             return {
@@ -69,7 +60,7 @@ export const reducer = (state: InitalState = initalState, action: Iaction) => {
         case SEARCH:
             if (state.productList.length) {
                 state.productListFilter = state.productList.filter((item: any) =>
-                    item.name.toLowerCase().includes(action.value.toLowerCase()))
+                    item.name.toLowerCase().includes(action.value!.toLowerCase()))
                 if (state.productListFilter.length === 0) {
                     state.errorMessage = 'Ничего не найдено'
                 }
@@ -78,7 +69,7 @@ export const reducer = (state: InitalState = initalState, action: Iaction) => {
                 ...state,
             }
         case ORDERING:
-            state.orderList = action.orderList
+            state.orderList = action.orderList!
             localStorage.setItem('orderData', JSON.stringify(state.orderList))
 
             return {

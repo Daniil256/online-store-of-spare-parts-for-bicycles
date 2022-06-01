@@ -13,9 +13,9 @@ const Product_item: ComponentType<IProps> = ({
   onOrdering,
   items,
 }) => {
-  const quantityOfGoodsCalc = (value: number, item: Item | undefined) => {
+  const quantityOfGoodsCalc = (value: number, item: Item) => {
     if (value > 0) {
-      item!.numberOfGoods = value;
+      item.numberOfGoods = value;
       onOrdering([item]);
     }
   };
