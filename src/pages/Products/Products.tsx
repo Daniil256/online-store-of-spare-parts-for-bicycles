@@ -5,7 +5,7 @@ import { Button } from "../../components/UI/Button/Button";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
 import React, { useEffect, useRef, useState } from "react";
 import { Loading } from "../../components/UI/Loading/Loading";
-import { IProps, Item } from "../../interfaces";
+import { IProps } from "../../interfaces";
 import { ComponentType } from "react";
 
 const Products: ComponentType<IProps> = ({

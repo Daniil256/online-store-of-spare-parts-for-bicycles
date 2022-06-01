@@ -7,23 +7,25 @@ export interface Item {
     numberOfGoods: number
 }
 
+export interface Iproducts {
+    productListCart: Array<Item>
+    productList: Array<Item>
+    productListFilter: Array<Item>
+    orderList: Array<Item>
+    errorMessage: string
+}
+
 export interface IProps {
-    products: {
-        productListCart: Array<Item>
-        productList: Array<Item>
-        productListFilter: Array<Item>
-        orderList: Array<Item>
-        errorMessage: string
-    };
+    products: Iproducts;
     items?: Array<Item>
     totalCost?: number
     onSortByName(): void;
     onSortByCost(): void;
     onSearch(value: string): void;
-    onOrdering(array: Array<object>): void;
+    onOrdering(array: Array<Item>): void;
     onAddInCart(item: object): void
     onRemoveInCart(item: object): void
-    onLoadedProductList: (response: Array<object>) => void;
+    onLoadedProductList: (response: Array<Item>) => void;
     onErrorMessage: (value: string) => void
     onClearCart: () => void
 }
@@ -55,7 +57,5 @@ export interface Iform {
     active?: any
 }
 export interface IrootReducer {
-    rootReducer: {
-        products: IProps
-    }
+    rootReducer: Iproducts
 }
