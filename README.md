@@ -24,6 +24,7 @@
 - git init
 - git remote add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 - git pull origin project_first_version
+- npm i
 - npm start
 - перейти в браузере в localhost:3000
 - так же можно запустить готовый bulid проекта по ссылке https://daniil256.github.io
@@ -34,6 +35,7 @@
 - git init
 - git remote add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 - git pull origin test_task_with_using_typescript
+- npm i
 - npm run dev (может запуститься не в первого раза)
 - перейти в браузере localhost:1234
 
