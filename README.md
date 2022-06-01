@@ -22,7 +22,7 @@
 
 # Запуск старой версии проекта 
 - git init
-- git add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
+- git remote add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 - git pull origin project_first_version
 - npm start
 - перейти в браузере в localhost:3000
@@ -32,7 +32,7 @@
 
 # ЗАПУСК ОБНОВЛЕННОЙ ВЕРСИИ
 - git init
-- git add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
+- git remote add origin https://github.com/Daniil256/online-store-of-spare-parts-for-bicycles.git
 - git pull origin test_task_with_using_typescript
 - npm run dev (может запуститься не в первого раза)
 - перейти в браузере localhost:1234
