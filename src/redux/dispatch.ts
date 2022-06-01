@@ -2,8 +2,6 @@ import { Iaction, IrootReducer, Item } from "../interfaces"
 
 
 export function mapStateToProps({ rootReducer }: IrootReducer) {
-    console.log(rootReducer);
-
     return {
         products: rootReducer
     }
