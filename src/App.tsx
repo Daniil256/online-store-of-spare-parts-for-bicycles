@@ -18,10 +18,10 @@ import { IProps, Item } from "./interfaces";
 
 const App: FC<IProps> = ({ onLoadedProductList, onErrorMessage }) => {
   useMemo(async () => {
-    const response: { data: Array<Item> } = await axios.get(
-      "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
-    );
     try {
+      const response: { data: Array<Item> } = await axios.get(
+        "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
+      );
       console.log("Произведен запрос на сервер");
       onLoadedProductList(response.data);
     } catch (e) {

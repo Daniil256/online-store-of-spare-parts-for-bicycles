@@ -1,4 +1,4 @@
-import { Iaction, InitalState } from "../interfaces";
+import { Iaction, InitalState, Item } from "../interfaces";
 import { ADD_IN_CART, CLEAR_CART, ERROR_MESSAGE, ORDERING, PRODUCT_LIST_LOADED, REMOVE_FROM_CART, SEARCH, SORT_BY_COST, SORT_BY_NAME } from "./types";
 
 
@@ -59,8 +59,9 @@ export const reducer = (state = initalState, action: Iaction) => {
 
         case SEARCH:
             if (state.productList.length) {
-                state.productListFilter = state.productList.filter((item: any) =>
+                state.productListFilter = state.productList.filter((item) =>
                     item.name.toLowerCase().includes(action.value!.toLowerCase()))
+                state.errorMessage = ''
                 if (state.productListFilter.length === 0) {
                     state.errorMessage = 'Ничего не найдено'
                 }

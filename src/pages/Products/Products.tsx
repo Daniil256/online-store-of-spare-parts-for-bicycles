@@ -30,11 +30,7 @@ const Products: ComponentType<IProps> = ({
     let page: number = 1;
 
     const callback = function (entries: Array<{ isIntersecting: boolean }>) {
-      if (
-        entries[0].isIntersecting &&
-        page * 15 < productList.length &&
-        productList.length
-      ) {
+      if (entries[0].isIntersecting && page * 15 < productList.length) {
         setLoad(true);
         setTimeout(() => {
           page++;
@@ -59,7 +55,9 @@ const Products: ComponentType<IProps> = ({
       </div>
 
       <div className="sort">
-        <span className="text">Показано позиций: {currentCountry.length}</span>
+        <span className="text">
+          Показано позиций: {currentCountry.length} из {productList.length}
+        </span>
         <Button func={onSortByName}>Сортировать по названию</Button>
         <Button func={onSortByCost}>Сортировать по цене</Button>
         <input
@@ -71,13 +69,13 @@ const Products: ComponentType<IProps> = ({
           placeholder="Поиск по названию..."
         />
       </div>
-      {productList.length ? (
+      {products.errorMessage ? (
+        <h4 className="message">{products.errorMessage}</h4>
+      ) : (
         <>
           <ProductItem items={currentCountry} />
           {load && <Loading />}
         </>
-      ) : (
-        <h4 className="message">{products.errorMessage}</h4>
       )}
       <div ref={lastElement} />
     </div>
