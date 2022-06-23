@@ -27,8 +27,8 @@
             border-radius: 10px;
             border: none;
             outline: none;
-            font-weight: 900;
-            font-size: 12px;
+            font-weight: 600;
+            font-size: 14px;
             &:hover {
                 box-shadow: 3px 3px 20px rgb(246, 128, 116);
             }
@@ -38,6 +38,8 @@
             &::placeholder {
                 color: inherit;
                 text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+                    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             }
             &:focus {
                 box-shadow: 3px 3px 20px rgb(246, 128, 116);

@@ -1,6 +1,6 @@
 import ProductItem from "../../components/ProductItem/ProductItem";
 import { connect } from "react-redux";
-import "./Products.css";
+import "./Products.scss";
 import { Button } from "../../components/UI/Button/Button";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
 import React, { useEffect, useRef, useState } from "react";

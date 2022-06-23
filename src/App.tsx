@@ -1,9 +1,9 @@
 import { Route, Routes } from "react-router";
 import { BrowserRouter } from "react-router-dom";
-import { useMemo } from "react";
+import { useEffect } from "react";
 import { connect } from "react-redux";
-import axios from "axios";
-import "./App.css";
+import "./App.scss";
+import "./index.css";
 import { Layout } from "./pages/Layout/Layout";
 import Products from "./pages/Products/Products";
 import { Contacts } from "./pages/Contacts/Contacts";
@@ -14,20 +14,17 @@ import { mapDispatchToProps, mapStateToProps } from "./redux/dispatch";
 import ProductPage from "./pages/ProductPage/ProductPage";
 import { FC } from "react";
 import React from "react";
-import { IProps, Item } from "./interfaces";
+import { IProps } from "./interfaces";
+import { usefetch } from "./components/useFetch/useFetch";
 
 const App: FC<IProps> = ({ onLoadedProductList, onErrorMessage }) => {
-  useMemo(async () => {
-    try {
-      const response: { data: Array<Item> } = await axios.get(
-        "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
-      );
-      console.log("Произведен запрос на сервер");
-      onLoadedProductList(response.data);
-    } catch (e) {
-      onErrorMessage("Ошибка загрузки данных с сервера " + e);
-    }
-  }, []);
+  const { data, error } = usefetch(
+    "https://api.jsonbin.io/b/628cdd79449a1f3821ecad9b/2"
+  );
+  useEffect(() => {
+    onErrorMessage(error);
+    onLoadedProductList(data);
+  }, [error, data]);
 
   return (
     <BrowserRouter>

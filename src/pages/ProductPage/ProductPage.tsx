@@ -1,11 +1,12 @@
 import { Params, useParams } from "react-router";
 import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
-import "./ProductPage.css";
+import "./ProductPage.scss";
 import { ProductItemLitle } from "../../components/ProductItemLitle/ProductItemLitle";
 import { NavLink } from "react-router-dom";
 import React, { ComponentType } from "react";
 import { IProps, Item } from "../../interfaces";
+import { product_images } from "../../components/product_images/product_images";
 
 const ProductPage: ComponentType<IProps> = ({
   onAddInCart,
@@ -39,7 +40,7 @@ const ProductPage: ComponentType<IProps> = ({
       <div className="column image">
         <div className="block brown">
           <div className="img">
-            <img src={`./img/products_img/${item.img}.jpg`} alt="description" />
+            <img src={product_images[item.img]} alt="description" />
           </div>
           <h5>{item.name} Lorem ipsum dolor sit amet consectetur.</h5>
         </div>

@@ -1,6 +1,6 @@
 import React, { ComponentType, useState } from "react";
 import { Form } from "react-final-form";
-import "./Order.css";
+import "./Order.scss";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
 import { connect } from "react-redux";
 import OrderProducts from "./OrderProducts";
@@ -8,7 +8,7 @@ import { FormBuyer } from "./FormBuyer";
 import { FormPayment } from "./FormPayment";
 import { FormDelivery } from "./FormDelivery";
 import { FormSending } from "./FormSending";
-import { IProps, Item } from "../../interfaces";
+import { IProps } from "../../interfaces";
 
 const formData: Array<object> = [];
 

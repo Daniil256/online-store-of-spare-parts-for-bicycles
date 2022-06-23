@@ -1,10 +1,11 @@
-import "./ProductItem.css";
+import "./ProductItem.scss";
 import { connect } from "react-redux";
 import { NavLink, Link } from "react-router-dom";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 import React, { ComponentType } from "react";
 import { IProps, Item } from "../../interfaces";
+import { product_images } from "../product_images/product_images";
 
 const Product_item: ComponentType<IProps> = ({
   onAddInCart,
@@ -27,10 +28,7 @@ const Product_item: ComponentType<IProps> = ({
           <div className="product">
             <Link to={`/${item.id}`}>
               <div className="product_img">
-                <img
-                  src={`./img/products_img/${item.img}.jpg`}
-                  alt="description"
-                />
+                <img src={product_images[item.img]} alt="description" />
               </div>
 
               <span className="product_title">

@@ -1,4 +1,4 @@
-import "./Contacts.css";
+import "./Contacts.scss";
 import React, { FC } from "react";
 export const Contacts: FC = () => {
   return (

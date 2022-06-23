@@ -1,10 +1,16 @@
 import React, { FC } from "react";
-import "./About.css";
+import "./About.scss";
+const facebook_icon = require("../../../icons/facbook.png");
+const youtube_icon = require("../../../icons/youtube.png");
+const inst_icon = require("../../../icons/inst.png");
+const google_icon = require("../../../icons/google.png");
+const teleg_icon = require("../../../icons/teleg.png");
+const vk_icon = require("../../../icons/vk.png");
 
 export const About: FC = () => {
   return (
     <div className="about content pink">
-      <h3>О магазине</h3>
+      <h2>О магазине</h2>
       <h4>Магазин (велосипеды, аксессуары, запчасти, тюнинг)</h4>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde fugiat
@@ -20,22 +26,22 @@ export const About: FC = () => {
 
       <ul className="block__social">
         <li className="social social__1">
-          <img className="img_social" src="./icons/facbook.png" alt="social" />
+          <img className="img_social" src={facebook_icon} alt="social" />
         </li>
         <li className="social social__2">
-          <img className="img_social" src="./icons/google.png" alt="social" />
+          <img className="img_social" src={google_icon} alt="social" />
         </li>
         <li className="social social__3">
-          <img className="img_social" src="./icons/inst.png" alt="social" />
+          <img className="img_social" src={inst_icon} alt="social" />
         </li>
         <li className="social social__4">
-          <img className="img_social" src="./icons/teleg.png" alt="social" />
+          <img className="img_social" src={teleg_icon} alt="social" />
         </li>
         <li className="social social__5">
-          <img className="img_social" src="./icons/vk.png" alt="social" />
+          <img className="img_social" src={vk_icon} alt="social" />
         </li>
         <li className="social social__6">
-          <img className="img_social" src="./icons/youtube.png" alt="social" />
+          <img className="img_social" src={youtube_icon} alt="social" />
         </li>
       </ul>
     </div>

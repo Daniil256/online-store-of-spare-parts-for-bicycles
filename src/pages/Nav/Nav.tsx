@@ -1,4 +1,4 @@
-import "./Nav.css";
+import "./Nav.scss";
 import { NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { mapDispatchToProps, mapStateToProps } from "../../redux/dispatch";

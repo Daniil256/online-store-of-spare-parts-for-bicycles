@@ -1,7 +1,8 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
 import { Item } from "../../interfaces";
-import "./ProductItemLitle.css";
+import { product_images } from "../product_images/product_images";
+import "./ProductItemLitle.scss";
 
 export const ProductItemLitle: FC<{ item: Item; order?: boolean }> = ({
   item,
@@ -11,7 +12,7 @@ export const ProductItemLitle: FC<{ item: Item; order?: boolean }> = ({
     <div className="ProductItemLitle">
       <Link to={`/${item.id}`}>
         <div className="product_img">
-          <img src={`./img/products_img/${item.img}.jpg`} alt="description" />
+          <img src={product_images[item.img]} alt="description" />
         </div>
         <div className="product_title">
           {item.name + " "}
