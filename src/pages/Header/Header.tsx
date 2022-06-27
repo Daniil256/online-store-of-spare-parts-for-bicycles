@@ -2,6 +2,7 @@ import "./Header.scss";
 import { NavLink } from "react-router-dom";
 import React, { FC } from "react";
 const header_img = require("../../../img/header_img.jpg");
+
 export const Header: FC = () => {
   return (
     <header className="header">

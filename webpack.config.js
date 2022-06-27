@@ -45,7 +45,14 @@ module.exports = {
             },
             {
                 test: /\.(jpg|png)$/,
-                type: 'asset/inline'
+                use: {
+                    loader: 'file-loader',
+                    options: {
+                        name: '[name].[ext]',
+                        outputPath: 'images',
+                        esModule: false,
+                    },
+                }
             },
             {
                 test: /\.jsx?$/,
